@@ -63,15 +63,14 @@ btn.addEventListener('click', function() {
     let val: string = iptValue.value
     if (val.length > 0) {
         doSomthing.push(val)
+        iptValue.value = ''
+        doSomthing.rander()
     } else {
         alert('请输入计划内容！')
     }
-    iptValue.value = ''
-    doSomthing.rander()
 })
 //操作
-uls.addEventListener('click', function(e) {
-    let ev: any = e;
+uls.addEventListener('click', function(ev:any) {
     let idx: number = ev.target.dataset.idx;
     if (ev.target.className === 'finish') {
         doSomthing.finish(idx)
