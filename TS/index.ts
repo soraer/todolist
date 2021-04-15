@@ -61,7 +61,7 @@ doSomthing.rander()
 //添加
 btn.addEventListener('click', function() {
     let val: string = iptValue.value
-    if (val !== 'undefined' && val.length > 0) {
+    if (val.length > 0) {
         doSomthing.push(val)
     } else {
         alert('请输入计划内容！')
